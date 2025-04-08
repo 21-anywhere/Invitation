@@ -8,36 +8,54 @@
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
-      background: #fff;
+      background: #76d1c5;
       color: #000;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       padding: 20px 40px;
       border-bottom: 1px solid #ddd;
     }
+
     nav a {
       margin-left: 20px;
       text-decoration: none;
       color: #000;
       font-weight: bold;
     }
-    .hero {
-      width: 100%;
+
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
       height: 80vh;
-      background-image: url('https://source.unsplash.com/1600x900/?surf');
-      background-size: cover;
-      background-position: center;
+      overflow: hidden;
     }
+
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .content {
       padding: 60px 40px;
       text-align: center;
     }
+
     .content h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
     }
+
     .content p {
       font-size: 1.2rem;
       max-width: 600px;
@@ -55,11 +73,40 @@
     </nav>
   </header>
 
-  <div class="hero"></div>
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="https://source.unsplash.com/1600x900/?surf" alt="Surfing" />
+    </div>
+    <div class="slide">
+      <img src="https://source.unsplash.com/1600x900/?beach" alt="Beach" />
+    </div>
+    <div class="slide">
+      <img src="https://source.unsplash.com/1600x900/?sunset" alt="Sunset" />
+    </div>
+  </div>
 
   <div class="content">
     <h1>Welcome to Our World</h1>
     <p>自然、アート、サーフカルチャーにインスパイアされたライフスタイルブランド。</p>
   </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // 4秒ごとに切り替え
+    }
+
+    showSlides();
+  </script>
 </body>
 </html>
