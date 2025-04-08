@@ -2,103 +2,64 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>お知らせサイト | Gallery Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Amsterdam風サイト</title>
   <style>
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-      line-height: 1.6;
+      background: #fff;
+      color: #000;
     }
-
     header {
-      background-color: #ffffff;
-      padding: 2rem;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
       border-bottom: 1px solid #ddd;
     }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
     }
-
-    header p {
-      color: #666;
+    .hero {
+      width: 100%;
+      height: 80vh;
+      background-image: url('https://source.unsplash.com/1600x900/?surf');
+      background-size: cover;
+      background-position: center;
     }
-
-    .container {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    .content {
+      padding: 60px 40px;
+      text-align: center;
     }
-
-    .event {
-      background-color: #fff;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      transition: box-shadow 0.3s;
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
-
-    .event:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .event h2 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .event .date {
-      font-size: 0.9rem;
-      color: #999;
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      .event h2 {
-        font-size: 1.1rem;
-      }
+    .content p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>イベント情報</h1>
-    <p>アートギャラリー・展覧会・ワークショップなどのお知らせ</p>
+    <div class="logo">My Art Brand</div>
+    <nav>
+      <a href="#">Shop</a>
+      <a href="#">Gallery</a>
+      <a href="#">About</a>
+    </nav>
   </header>
 
-  <div class="container">
+  <div class="hero"></div>
 
-    <div class="event">
-      <h2>春のアート展 2025</h2>
-      <div class="date">開催日：2025年4月20日（日）〜 4月30日（水）</div>
-      <p>地元アーティストによる現代アート展。入場無料。</p>
-    </div>
-
-    <div class="event">
-      <h2>ワークショップ：色と感情</h2>
-      <div class="date">開催日：2025年5月10日（土）</div>
-      <p>色彩と心のつながりをテーマにした体験型ワークショップ。</p>
-    </div>
-
-    <div class="event">
-      <h2>ギャラリートーク with 作家A</h2>
-      <div class="date">開催日：2025年5月15日（木）18:00〜</div>
-      <p>展示作家による制作秘話や作品への想いを語るトークイベント。</p>
-    </div>
-
+  <div class="content">
+    <h1>Welcome to Our World</h1>
+    <p>自然、アート、サーフカルチャーにインスパイアされたライフスタイルブランド。</p>
   </div>
-
 </body>
 </html>
